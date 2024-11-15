@@ -1,0 +1,34 @@
+{% extends "base.html"%}
+
+{% block head %}
+<title>Estadisticas</title>
+<link rel="stylesheet" href="{{url_for("static", filename="css/estadisticas.css")}}">
+{% endblock %}
+
+{% block main%} 
+<nav>
+    <a href="{{url_for('juego')}}">Volver</a>
+    <a href="{{url_for('login')}}">Salir</a>
+</nav>
+<div class="container">
+    <ul>
+        <li>Usuario: {{usuario}}</li>
+        <li>Acertadas: {{correctas}}</li>
+        <li>Falladas: {{incorrectas}}</li>
+        <li>Porcentaje aciertos: {{porcentaje}}%</li>
+    </ul>
+    <h1>Records: </h1>
+    <table>
+        <tr>
+            <th>Posicion</th>
+            <th>Nombre</th>
+            <th>Porcentaje</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Wisepilo</td>
+            <td>100%</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

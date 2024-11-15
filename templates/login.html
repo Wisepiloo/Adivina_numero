@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+
+{% block head %}
+<title>Ingresar</title>
+<link rel="stylesheet" href="{{url_for("static", filename="css/forms.css")}}">
+{% endblock %}
+
+{% block main%} 
+<div class="container">
+    <h1>Bienvenido</h1>
+    <!-- Formulario -->
+    <form class="form" action="{{url_for('login')}}" method="POST">
+        <!-- Mostrar mensajes flash -->
+    {% with mensajes = get_flashed_messages(with_categories=true) %}
+        {% if mensajes %}
+            <ul>
+                {% for categoria, mensaje in mensajes %}
+                    <p class="{{ categoria }}">{{ mensaje }}</p>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+            <!-- Casillas -->
+        <label for="fuser">Usuario</label>
+        <input type="text" name="username" id="fuser">
+        <label for="fpass">Constraseña</label>
+        <input type="password" name="password" id="fpass">
+        <button class="btn" type="submit">Ingresar</button>
+        <p class="btn_registrarse">¿No tienes una cuenta?<a href="{{url_for("register")}}"> Registrarse</a></p>
+        <a class="btn" href="#">¿No recuerdas la contraseña?</a>
+    </form>
+</div>
+{% endblock %}

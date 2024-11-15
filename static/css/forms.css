@@ -1,0 +1,90 @@
+.error_form {
+    color: #f00;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.container {
+    width: 60%;
+    overflow: hidden;
+}
+h1 {
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    color: #38e5f1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+input, button {
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.8rem;
+}
+
+input:hover, input:focus {
+    border: 1px #38e5f1 solid;
+    outline: none;
+}
+
+button {
+    background-color: #38e5f1;
+    border: 1px #38e5f1 solid;
+}
+.btn_registrarse {
+    text-align: center;
+}
+
+.-registrarse {
+    display: inline-block;
+}
+
+@media screen and (max-width: 450px) { 
+    body {
+        font-size: 1.3rem; 
+    }
+    input, button {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .container {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 900px) { 
+    body { 
+    font-size: 1.4rem;  
+    }
+    input, button {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}

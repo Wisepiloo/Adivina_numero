@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Juego</title>
+<link rel="stylesheet" href="{{url_for("static", filename="css/juego.css")}}">
+<link rel="stylesheet" href="{{url_for("static", filename="css/fonts.css")}}">
+{% endblock %}
+
+{% block main %} 
+<nav>
+    <ul>
+        <li><a href="{{url_for("estadisticas")}}">Estadisticas</a></li>
+        <li><a href="{{url_for("login")}}">Salir</a></li>
+    </ul>
+</nav>
+<div class="contenedor">
+    <p class="texto_juego">Puntaje: <span class="puntaje">{{puntaje}}</span></p>
+    <p class="numero_random">¿?</p>
+    <div class="contenedor_btns">
+        <button class="respuesta_btn">0</button>
+        <button class="respuesta_btn">1</button>
+        <button class="respuesta_btn">2</button>
+        <button class="respuesta_btn">3</button>
+        <button class="respuesta_btn">4</button>
+        <button class="respuesta_btn">5</button>
+        <button class="respuesta_btn">6</button>
+        <button class="respuesta_btn">7</button>
+        <button class="respuesta_btn">8</button>
+        <button class="respuesta_btn">9</button>
+    </div>
+</div>
+
+    <script src="{{url_for("static", filename="javascript/juego.js")}}"></script>
+{% endblock %}
+    

@@ -1,0 +1,142 @@
+body { 
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    list-style: none;
+    display: inline;
+    margin: 1rem;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+a:hover {
+    color: #32b9ee;
+}
+.texto_juego {
+    font-family: sans-serif;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.numero_random {
+    font-size: 3rem;
+    font-family: "Super-Kinds";
+    padding: 2rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.contenedor_btns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.respuesta_btn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0.3rem;
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.respuesta_btn:hover {
+    background-color: #32b9ee;
+}
+
+@media screen and (max-width: 450px) {
+    .contenedor {
+        width: 95%;
+    }
+
+    .contenedor_btns {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 300px) {
+    nav {
+        display: none;
+    }
+
+    .contenedor {
+        width: 100%;
+    }
+
+    .contenedor_btns {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 225px) {
+    button:last-child {
+        margin: auto;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .contenedor {
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .contenedor {
+        height: 100%;
+    }
+}
+@media screen and (max-height: 550px) {
+    body {
+        font-size: 1rem;
+    }
+    .contenedor {
+        height: 100%;
+
+    }
+    .numero_random {
+        font-size: 2rem;
+    }
+    .respuesta_btn {
+        font-size: 1rem;
+        margin: 0;
+    }
+}
